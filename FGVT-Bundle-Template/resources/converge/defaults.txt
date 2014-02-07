@@ -1,0 +1,2 @@
+bundle.category = converge
+project.description = A new converge project.

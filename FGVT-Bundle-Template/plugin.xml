@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         id="FGVT-Bundle"
+         name="FGVT-Bundle"
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="FGVT-Bundle-Template.catFGVT"
+            name="FGVT">
+      </category>
+      <wizard
+            category="FGVT-Bundle-Template.catFGVT"
+            class="de.htwsaar.fgvt.NewBundleWizard"
+            finalPerspective="org.eclipse.jst.j2ee.J2EEPerspective"
+            id="FGVT-Bundle-Template.bundleWizard"
+            name="CONVERGE OSGi-Bundle"
+            project="true">
+      </wizard>
+   </extension>
+
+</plugin>

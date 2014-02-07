@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: FGVT-Bundle-Template
+Bundle-SymbolicName: FGVT-Bundle-Template;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: fgvt_bundle_template.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.ui.ide;bundle-version="3.9.1",
+ org.eclipse.swt,
+ org.eclipse.core.resources;bundle-version="3.8.101",
+ org.eclipse.jdt.core;bundle-version="3.9.1",
+ org.eclipse.m2e.core;bundle-version="1.4.0",
+ org.apache.commons.io;bundle-version="2.0.1"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy

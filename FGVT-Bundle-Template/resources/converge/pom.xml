@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <!-- ID of the group to which this artifact belongs. 
+   As long as this is 'de.htw_saarland' it may be omitted as this 
+   is the default value inherited by the parent. -->
+  <!--
+	<groupId>de.htw_saarland.renesas</groupId>
+  -->
+  <!-- ID of this artifact. -->
+  <artifactId>$PROJECTNAME$</artifactId>
+  <!-- Version of this artifact. Format: MAJOR.MINOR.PATCH[.BUILD][-SNAPSHOT]-->
+  <version>0.0.1-SNAPSHOT</version>
+  <!-- Human readable name of this artifact. Defaults to artifactId -->
+  <name>$PROJECTNAME$</name>
+  <!-- The packaging type. DO NOT CHANGE -->
+  <packaging>bundle</packaging>
+  <!-- A short (!) description of this artifact. also used in the Manifest. -->
+  <description>$PROJECTDESCRIPTION$</description>
+  <!-- Change appropriate to developer.
+		It is possible to enter more than one developer e.g.
+		if this bundle is maintained by more than one person.
+		However, only the first developer will be set as maintainer contact
+		in the bundle manifest. -->
+  <developers>
+    <developer>
+      <id>$DEVELOPERID$</id>
+      <name>$DEVELOPERNAME$</name>
+      <email>$DEVELOPERMAIL$</email>
+    </developer>
+  </developers>
+  <build>
+    <plugins>
+      <plugin>
+        <!--  DO NOT CHANGE groupID OR artifactID OR extensions! -->
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <!-- Needed to add goals from this plugin to the default lifecycle -->
+        <extensions>true</extensions>
+        <configuration>
+          <instructions>
+            <!-- Add instructions as needed to create the bundle.
+		(see http://felix.apache.org/site/apache-felix-maven-bundle-plugin-bnd.html 
+		for available instructions and default values.)
+		NOTE: For the HTW build-process, 'undle-Platform', 'Bundle-Category' and 
+                 'Bundle-Function' are required.
+		 -->
+            <Bundle-Category>$BUNDLE.CATEGORY$</Bundle-Category>
+            <Bundle-Function>system</Bundle-Function>
+          </instructions>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <!-- Add dependencies to the artifact. 
+    NOTE: An artifact MAY dependend on an SNAPSHOT version. However if it does 
+     so, it may not be release through the maven release plugin. So you should only
+     rely on SNAPSHOT versions for a short period during development and switch to 
+     release versions as fast as possible. -->
+  <dependencies>
+    <dependency>
+      <groupId>com.prosyst.mbs</groupId>
+      <artifactId>libosgi</artifactId>
+      <version>7.0.0</version>
+    </dependency>
+  </dependencies>
+  <!-- DO NOT CHANGE BELOW; except VERSION if you are sure!-->
+  <parent>
+    <groupId>de.htw_saarland</groupId>
+    <artifactId>bundle-pom</artifactId>
+    <version>1.0.10</version>
+  </parent>
+</project>
