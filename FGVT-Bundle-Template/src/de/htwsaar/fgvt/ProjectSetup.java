@@ -5,16 +5,12 @@ package de.htwsaar.fgvt;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.net.URL;
 import java.util.HashMap;
 
-import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IProjectDescription;
 import org.eclipse.core.runtime.CoreException;
-import org.eclipse.core.runtime.Platform;
 import org.eclipse.m2e.core.MavenPlugin;
-import org.osgi.framework.Bundle;
 
 /**
  * @author mfuenfrocken
@@ -52,9 +48,9 @@ public class ProjectSetup {
 	
 	private void initializeMavenProject() throws FileNotFoundException, CoreException, IOException {
 		//Create pom files.
-		Bundle bundle = Platform.getBundle("FGVT-Bundle-Template");
-		IFile pomFile = this.project.getFile("pom.xml");
-		URL entry = bundle.getEntry("/resources/converge/pom.xml");
+//		Bundle bundle = Platform.getBundle("FGVT-Bundle-Template");
+//		IFile pomFile = this.project.getFile("pom.xml");
+//		URL entry = bundle.getEntry("/resources/converge/pom.xml");
 		
 		//first create POM file
 		System.out.println("Creating pom file");
